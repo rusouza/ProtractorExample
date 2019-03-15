@@ -2,10 +2,8 @@ describe('angularjs homepage todo list', function() {
     
     var email = element(by.id('email'));
     var senha = element(by.id('pass'));
+    var paginaInicial = element(by.dataclick('home_icon'));
     var goButton = element(by.xpath("//label[@id='loginbutton']/input"));
-
-    var latestResult = element(by.binding('latest'));
-    var history = element.all(by.repeater('result in memory'));
 
     beforeEach(function() {
         browser.get('https://www.facebook.com/');
@@ -23,7 +21,7 @@ describe('angularjs homepage todo list', function() {
         // login e senha do facebook
         login("", "");
     
-        expect(history.count()).toEqual(2);
+        expect(paginaInicial.getText()).toEqual("Página inicial");
     });
 
     it('Verificar Titulo', function() {
