@@ -9,8 +9,8 @@ exports.config = {
         }
     },
     suites: {
-        homepage: 'tests/e2e/homepage/**/*Spec.js',
-        mensagem: 'tests/e2e/contact_search/**/*Spec.js'
+        login: 'pages/login-facebook.js',
+        evento: 'pages/evento-facebook.js'
     },
     onPrepare: function () {
         browser.ignoreSynchronization = true;

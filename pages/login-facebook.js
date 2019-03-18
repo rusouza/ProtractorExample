@@ -1,4 +1,4 @@
-describe('angularjs homepage todo list', function() {
+describe('Logar e Validar login no Facebook', function() {
     
     var email = element(by.id('email'));
     var senha = element(by.id('pass'));
@@ -9,17 +9,13 @@ describe('angularjs homepage todo list', function() {
         browser.get('https://www.facebook.com/');
     });
 
-    function login(a, b) {
-        email.sendKeys(a);
-        senha.sendKeys(b);
-        goButton.click();
-    }
-
     it('Logar no Facebook', function() {
-        browser.debugger();
 
         // login e senha do facebook
-        login("", "");
+        email.sendKeys("");
+        senha.sendKeys("");
+
+        goButton.click();
     
         expect(paginaInicial.getText()).toEqual("Página inicial");
     });
