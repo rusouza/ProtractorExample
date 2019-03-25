@@ -2,7 +2,7 @@ describe('Logar e Validar login no Facebook', function() {
     
     var email = element(by.id('email'));
     var senha = element(by.id('pass'));
-    var paginaInicial = element(by.dataclick('home_icon'));
+    var paginaInicial = element(by.xpath("//div[@dataclick='home_icon']"));
     var goButton = element(by.xpath("//label[@id='loginbutton']/input"));
 
     beforeEach(function() {
