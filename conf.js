@@ -5,8 +5,8 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         'chromeOptions': {
-            prefs: { 'profile.default_content_setting_values.notifications': '1'}
-            //'args': [ '--start-maximized', 'disable-infobars']
+            prefs: { 'profile.default_content_setting_values.notifications': '1'},
+            'args': [ '--start-maximized', 'enable-notification'/* , 'disable-infobars' */]
         }
     },
     suites: {
